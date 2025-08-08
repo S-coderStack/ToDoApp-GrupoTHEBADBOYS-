@@ -27,6 +27,6 @@ print(task.is_deleted())  # True
 ```
 
 ## Instrucciones de uso:
-1. Agrega una tarea con `add_task("nombre")`.
-2. Elimina una tarea con `remove_task("nombre")`.
-3. Usa `get_tasks()` para ver las tareas registradas.
+1. Crea una tarea con `TaskModel("nombre de la tarea")`.
+2. Elimina una tarea con el método `delete_task()`.
+3. Verifica si la tarea está eliminada con `is_deleted()`.
