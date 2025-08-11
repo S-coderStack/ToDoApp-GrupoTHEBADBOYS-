@@ -5,28 +5,48 @@
 - Jonathan Marenco
 - Santiago Meriño
 
-## Funcionalidades implementadas:
-- Agregar tareas.
-- Ver listado de tareas.
-- **Eliminar tareas**
- con la función `remove_task(task_name)` en `task_model.py`.
+## Funcionalidades implementadas por cada estudiante:
 
-## Funcionalidad de eliminación de tareas
+### Estudiante 1 Santiago Meriño
+- Marcar tareas como completadas.
+- Métodos: `mark_as_complete()`, `is_completed()`
 
-El modelo `TaskModel` ahora incluye métodos para eliminar una tarea y consultar si está eliminada:
+### Estudiante 2 Juan Lubo
+- Eliminar tareas.
+- Método: `delete_task()`
 
-- `delete_task()`: Marca la tarea como eliminada.
-- `is_deleted()`: Devuelve `True` si la tarea está eliminada, `False` en caso contrario.
+### Estudiante 3 Joanthan Marenco
+- Simulación de conflicto: nombres alternativos para atributos y métodos.
+- Métodos: `set_done()`, `is_done_method()`, `remove_task()`, `is_removed()`
 
-**Ejemplo de uso:**
 
+## Ejemplos de uso
+
+### Marcar tarea como completada (Estudiante 1)
+```python
+task = TaskModel("Estudiar para el examen")
+task.mark_as_complete()
+print(task.is_completed())  # True
+```
+
+### Eliminar tarea (Estudiante 2)
 ```python
 task = TaskModel("Estudiar para el examen")
 task.delete_task()
 print(task.is_deleted())  # True
 ```
 
-## Instrucciones de uso:
+### Simulación de conflicto (Estudiante 3)
+```python
+task = TaskModel("Estudiar para el examen")
+task.set_done()
+print(task.is_done_method())  # True
+task.remove_task()
+print(task.is_removed())  # True
+```
+
+## Instrucciones de uso
 1. Crea una tarea con `TaskModel("nombre de la tarea")`.
-2. Elimina una tarea con el método `delete_task()`.
-3. Verifica si la tarea está eliminada con `is_deleted()`.
+2. Marca la tarea como completada con `mark_as_complete()` y verifica con `is_completed()`.
+3. Elimina una tarea con el método `delete_task()` y verifica con `is_deleted()`.
+4. (Conflicto) Usa los métodos alternativos para simular el conflicto: `set_done()`, `is_done_method()`, `remove_task()`, `is_removed()`.
